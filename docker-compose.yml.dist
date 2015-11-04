@@ -5,7 +5,7 @@ data:
     - ./data/ldap/config:/etc/ldap/slapd.d
 
 ldap:
-  image: osixia/openldap
+  image: osixia/openldap:1.0.3
   ports:
     - "389:389"
   environment:
