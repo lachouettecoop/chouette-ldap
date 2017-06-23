@@ -5,9 +5,12 @@ data:
     - ./data/ldap/config:/etc/ldap/slapd.d
 
 ldap:
-  image: osixia/openldap:1.0.3
+  image: osixia/openldap:1.1.8
+  restart: always
+  hostname: ldap.lachouettecoop.test
   ports:
     - "389:389"
+    - "636:636"
   environment:
     - LDAP_ORGANISATION="La chouette coop"
     - LDAP_DOMAIN="lachouettecoop.test"
